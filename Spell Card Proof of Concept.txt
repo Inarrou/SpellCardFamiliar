@@ -1,0 +1,10 @@
+Character input
+Sprite animations
+Collision detection
+
+Basic mock UI
+Deck object that can shuffle, draw, etc.
+Cards that can be played
+
+Enemy that can be attacked
+Basic AI
