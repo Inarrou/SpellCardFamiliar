@@ -274,9 +274,15 @@ if(global.playerState == playerStates.neutral)
 	}
 	if(global.playerState == playerStates.pivot) //Once the player is pivoting, decrease the friction
 	{
-		friction = 0.15
+		friction = 0.2
 		
-		if(speed < movSpeed/2) //Once the player has fully stopped, return them to neutral
+		if((keyboard_check_pressed(vk_up)||keyboard_check_pressed(vk_down) //Cancels pivot if 
+		||keyboard_check_pressed(vk_left)||keyboard_check_pressed(vk_right)) && speed < movSpeed * 1.5)//Player tries to move again
+		{
+			speed = 0;
+		}
+		
+		if(speed == 0) //Once the player has fully stopped, return them to neutral
 		{
 			global.playerState = playerStates.neutral;
 		}

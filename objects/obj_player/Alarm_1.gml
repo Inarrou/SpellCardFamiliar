@@ -10,19 +10,20 @@ if(global.playerState == playerStates.startUp)
 {
 	global.playerState = playerStates.casting; //Set the player state to the next state
 	if(spellQueue != noone) //Make sure there's something queued up
-	script_execute(spellQueue.playCard(spellQueue));
+	script_execute(spellQueue.playCard,spellQueue);
 }
 
 if(global.playerState == playerStates.casting)
 {
 	global.playerState = playerStates.recovery;
 	if(spellQueue != noone)
-	script_execute(spellQueue.playCard(spellQueue));
+	script_execute(spellQueue.playCard,spellQueue);
 }
 
 if(global.playerState == playerStates.recovery)
 {
 	global.playerState = playerStates.neutral;
+	alarm[1] = -1;
 	if(spellQueue != noone)
-	script_execute(spellQueue.playCard(spellQueue));
+	script_execute(spellQueue.playCard,spellQueue);
 }

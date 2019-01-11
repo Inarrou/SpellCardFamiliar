@@ -2,9 +2,9 @@
 visible = false;
 image_speed = 0;
 deckOrigin = noone; //The deck this card comes from
-cardID = irandom_range(0,2);
+cardID = irandom_range(0,2); //Currently randomizes ID
 
-if (cardID == 0)
+if (cardID == 0) //Uses ID to assign the proper play function
 {
 	playCard = scr_playCard0;
 }

@@ -6,5 +6,5 @@ if(hitstop > 0) //If hitstopped, the player can't do anything
 }
 else
 { 
-	scr_playerMovement();
+	scr_playerMovement(); //Hiding movement in a script for readability
 }

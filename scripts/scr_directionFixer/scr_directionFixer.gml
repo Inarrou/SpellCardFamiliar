@@ -45,8 +45,8 @@ switch (facing) //Adds the numbers differently depending on direction
 	case upLeft:
         tempOffset0 = offsetY * dcos(45);
 		tempOffset1 = offsetX * dcos(45);
-		offsetY = tempOffset0 * -1 + tempOffset1;
-		offsetX = tempOffset0 * -1 - tempOffset1;
+		offsetY = tempOffset0 * -1 - tempOffset1;
+		offsetX = tempOffset0 * -1 + tempOffset1;
         break;
 	case downRight:
         tempOffset0 = offsetY * dcos(45);
