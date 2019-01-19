@@ -21,7 +21,6 @@ enum playerStates
 	startUp,
 	casting,
 	recovery,
-	invincible,
 	hitstunned,
 	knockeddown,
 	pivot

@@ -14,6 +14,7 @@ hitstop = alarm[0]; //Used to pause step event if running
 hitstop = -1; //Pauses the timer
 
 spellQueue = noone; //Set to a pointer to whichever card is being played.
+//startUp = 0; Used later for casting spells. 
 alarm[1] = -1;
 
 movSpeed = 5;
