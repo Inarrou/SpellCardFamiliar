@@ -29,5 +29,5 @@ deckType = irandom_range(0,1); //Decides if the deck is blue/red
 if(currentCards > 0)
 {
 	scr_drawCard(deckNum, ds_list_find_value(deck,0));
-	currentCards -= 1;
+	currentCards --;
 }
