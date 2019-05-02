@@ -14,8 +14,7 @@ if(global.playerState == playerStates.neutral || global.playerState == playerSta
 
 if(global.playerState == playerStates.casting && obj_player.spellQueue == card)
 {
-	hitbox = scr_createHitbox(obj_player.x,obj_player.y,0,5,spr_card0,noone,60,global.playerFacing,up,1,1,1,1,1);
-	hitbox.owner = obj_player;
+	hitbox = scr_createHitbox(obj_player.x,obj_player.y,0,5,spr_card0,obj_player.id,60,global.playerFacing,up,1,1,50,10,1);
 	scr_discardCard(card);
 	obj_player.spellQueue = noone;
 	obj_player.alarm[1] = 60;

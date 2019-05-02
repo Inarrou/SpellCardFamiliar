@@ -10,8 +10,7 @@ friction = 0.2; //Used for slower the player down if no key is pressed
 hspeed = 0; //Independant speed per axis, in order to allow for inertia in one direction
 vspeed = 0;
 
-hitstop = alarm[0]; //Used to pause step event if running
-hitstop = -1; //Pauses the timer
+alarm[0] = -1; //Used to pause step event if running
 
 spellQueue = noone; //Set to a pointer to whichever card is being played.
 alarm[1] = -1;
