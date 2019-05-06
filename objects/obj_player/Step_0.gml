@@ -8,3 +8,4 @@ else
 { 
 	scr_playerMovement(); //Hiding movement in a script for readability
 }
+//Later, use animation frames and compare to start up to determine if player should cast a spell
