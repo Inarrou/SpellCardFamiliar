@@ -14,7 +14,7 @@
 #macro downLeft 225
 
 //States for player
-enum playerStates
+enum actorStates
 {
 	neutral,
 	moving,
@@ -25,18 +25,6 @@ enum playerStates
 	hitstunned,
 	knockeddown,
 	pivot
-}
-
-enum actorStates
-{
-	neutral,
-	moving,
-	startUp,
-	casting,
-	recovery,
-	invincible,
-	hitstunned,
-	knockeddown
 }
 
 //Friendly status, used for determining collision

@@ -6,23 +6,23 @@
 //Should be replaced later, needs to work off of specific animation frames.
 //Instead have a variable called startUp, and when frame count reaches that number, call script
 
-if(global.playerState == playerStates.startUp)
+if(playerState == actorStates.startUp)
 {
-	global.playerState = playerStates.casting; //Set the player state to the next state
+	playerState = actorStates.casting; //Set the player state to the next state
 	if(spellQueue != noone) //Make sure there's something queued up
 	script_execute(spellQueue.playCard,spellQueue);
 }
 
-if(global.playerState == playerStates.casting)
+if(playerState == actorStates.casting)
 {
-	global.playerState = playerStates.recovery;
+	playerState = actorStates.recovery;
 	if(spellQueue != noone)
 	script_execute(spellQueue.playCard,spellQueue);
 }
 
-if(global.playerState == playerStates.recovery)
+if(playerState == actorStates.recovery)
 {
-	global.playerState = playerStates.neutral;
+	playerState = actorStates.neutral;
 	alarm[1] = -1;
 	if(spellQueue != noone)
 	script_execute(spellQueue.playCard,spellQueue);

@@ -3,18 +3,18 @@
 var card = argument0;
 
 
-if(global.playerState == playerStates.neutral || global.playerState == playerStates.moving || global.playerState = playerStates.pivot)
+if(obj_player.playerState == actorStates.neutral || obj_player.playerState == actorStates.moving || obj_player.playerState = actorStates.pivot)
 {
 	obj_player.spellQueue = card;
-	global.playerState = playerStates.startUp;
+	obj_player.playerState = actorStates.startUp;
 	obj_player.alarm[1] = 10;
 }
 
-if(global.playerState == playerStates.casting && obj_player.spellQueue == card)
+if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card)
 {
-	scr_createHitbox(obj_player.x,obj_player.y,100,100,spr_card2,obj_player.id,300,global.playerFacing,upRight,1,1,60,10,1);
-	scr_createHitbox(obj_player.x,obj_player.y,-100,100,spr_card2,obj_player.id,300,global.playerFacing,upLeft,1,1,60,10,1);
-	scr_createHitbox(obj_player.x,obj_player.y,0,100,spr_card2,obj_player.id,300,global.playerFacing,up,1,1,60,10,1);
+	scr_createHitbox(obj_player.x,obj_player.y,100,100,spr_card2,obj_player.id,300,obj_player.playerFacing,upRight,1,1,60,10,1);
+	scr_createHitbox(obj_player.x,obj_player.y,-100,100,spr_card2,obj_player.id,300,obj_player.playerFacing,upLeft,1,1,60,10,1);
+	scr_createHitbox(obj_player.x,obj_player.y,0,100,spr_card2,obj_player.id,300,obj_player.playerFacing,up,1,1,60,10,1);
 	obj_player.spellQueue = noone;
 	obj_player.alarm[1] = 10;
 	scr_discardCard(card);

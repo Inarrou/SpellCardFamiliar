@@ -1,4 +1,4 @@
-image_angle = global.playerFacing - 90; //Placeholder, should set sprite in specific input for direction
+image_angle = playerFacing - 90; //Placeholder, should set sprite in specific input for direction
 if(alarm[0] > 0) //If hitstopped, the player can't do anything
 {
 	image_speed = 0; //Pauses current animation
