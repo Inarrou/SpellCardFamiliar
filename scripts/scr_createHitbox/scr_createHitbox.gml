@@ -45,3 +45,5 @@ var totalOffset = scr_directionFixer(facing,trajectory,offsetX,offsetY);
 	hitbox.hitstun = hitstun;
 	hitbox.hitstop = hitstop;
 	hitbox.knockback = knockback;
+	
+	return hitbox.id;

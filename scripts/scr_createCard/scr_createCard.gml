@@ -19,6 +19,9 @@ case 1:
 case 2:
 	card.playCard = scr_playCard2;
 	break;
+case 3:
+	card.playCard = scr_playCard3;
+	break;
 default:
 	instance_destroy(card);
 	break;

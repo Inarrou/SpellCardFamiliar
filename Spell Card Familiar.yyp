@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "c5f644ce-2818-4409-87dc-a346067bd2f8",
+            "Value": {
+                "id": "cdf6b124-3e2d-42ad-928e-2ad091d79f98",
+                "resourcePath": "scripts\\scr_playCard3\\scr_playCard3.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "b06dfa23-e256-420e-8008-c4814c7f9669",
@@ -568,6 +576,7 @@
         "68d69f02-460c-4300-9b31-47cacf297023",
         "979780fa-9405-4a8b-9721-9d55a270385b",
         "40f65e54-3cbf-4d81-84fd-b1d3c6e70b1b",
+        "c5f644ce-2818-4409-87dc-a346067bd2f8",
         "ed0d14f6-d22d-496b-9ceb-ca86f25a4d9b",
         "43aeca74-e279-4fc7-acc2-dd689852fc43",
         "1e3bd744-1d65-4575-a825-b848b6b7a72c",
