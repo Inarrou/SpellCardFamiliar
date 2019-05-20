@@ -12,15 +12,13 @@ if(playerState == actorStates.startUp)
 	if(spellQueue != noone) //Make sure there's something queued up
 	script_execute(spellQueue.playCard,spellQueue);
 }
-
-if(playerState == actorStates.casting)
+else if(playerState == actorStates.casting)
 {
 	playerState = actorStates.recovery;
 	if(spellQueue != noone)
 	script_execute(spellQueue.playCard,spellQueue);
 }
-
-if(playerState == actorStates.recovery)
+else if(playerState == actorStates.recovery)
 {
 	playerState = actorStates.neutral;
 	alarm[1] = -1;

@@ -1,5 +1,6 @@
 if(playerState == actorStates.neutral)
 {
+	friction = 0.5
 	if(keyboard_check(vk_up))
 	{
 		playerFacing = up;
@@ -34,6 +35,7 @@ if(playerState == actorStates.neutral)
 }
 else if (playerState == actorStates.moving)
 {
+	friction = 0.5;
 	switch(keyboard_key)
 	{
 		/*--------------------------UP INPUT-------------------------*/
@@ -272,7 +274,7 @@ else if (playerState == actorStates.moving)
 			playerState = actorStates.neutral;
 		}
 }
-if(playerState == actorStates.pivot) //Once the player is pivoting, decrease the friction
+else if(playerState == actorStates.pivot) //Once the player is pivoting, decrease the friction
 {
 	friction = 0.5
 		
@@ -285,9 +287,6 @@ if(playerState == actorStates.pivot) //Once the player is pivoting, decrease the
 	if(speed == 0) //Once the player has fully stopped, return them to neutral
 	{
 		playerState = actorStates.neutral;
+		direction = playerFacing;
 	}
-}
-else
-{
-	friction = 0.5 //In regular cases, their friction will be normal
 }

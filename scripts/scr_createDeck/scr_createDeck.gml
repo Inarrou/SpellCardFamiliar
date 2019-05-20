@@ -6,20 +6,20 @@ var deckList = argument0;
 switch(instance_number(obj_deck)) //Determines the coordinates to put a new deck depending on how many exist
 {
 case 0:
-	_x = room_width * (27/32);
-	_y = room_height * (3/4);
+	_x = display_get_gui_width() * (27/32);
+	_y = display_get_gui_height() * (3/4);
 	break;
 case 1:
-	_x = room_width * (29/32);
-	_y = room_height * (3/4);
+	_x = display_get_gui_width() * (29/32);
+	_y = display_get_gui_height() * (3/4);
 	break;
 case 2:
-	_x = room_width * (27/32);
-	_y = room_height * (7/8);
+	_x = display_get_gui_width() * (27/32);
+	_y = display_get_gui_height() * (7/8);
 	break;
 case 3:
-	_x = room_width * (29/32);
-	_y = room_height * (7/8);
+	_x = display_get_gui_width() * (29/32);
+	_y = display_get_gui_height() * (7/8);
 	break;
 default:
 	_x = 0;
