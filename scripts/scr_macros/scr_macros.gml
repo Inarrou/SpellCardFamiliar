@@ -21,7 +21,6 @@ enum actorStates
 	startUp,
 	casting,
 	recovery,
-	invincible,
 	hitstunned,
 	knockeddown,
 	pivot
@@ -33,4 +32,21 @@ enum teams
 	friendly,
 	hostile,
 	noTeam
+}
+
+//Used to access the grid containing all card data
+enum cardData
+{
+	ID,
+	NAME,
+	RARITY,
+	TYPE,
+	ELEMENT,
+	COLOUR,
+	POWER,
+	SCRIPT,
+	TAGS,
+	DESCRIPTION,
+	SPRITE,
+	FLAVOUR
 }

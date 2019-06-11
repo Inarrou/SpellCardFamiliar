@@ -1,0 +1,89 @@
+[
+  {
+    "ID": 0,
+    "NAME": "Fireball",
+    "RARITY": 1,
+    "TYPE": "Active",
+    "ELEMENT": "Fire",
+    "COLOUR": "Red",
+    "POWER": 10,
+    "SCRIPT": "scr_playCard0",
+    "TAGS": [
+      "Attack",
+      "Projectile",
+      "Ranged"
+    ],
+    "DESCRIPTION": "Shoots a fireball.",
+    "SPRITE": "spr_card0",
+    "FLAVOUR": "A mage's bread and butter"
+  },
+  {
+    "ID": 1,
+    "NAME": "Root Spike",
+    "RARITY": 1,
+    "TYPE": "Active",
+    "ELEMENT": "Nature",
+    "COLOUR": "Red",
+    "POWER": 20,
+    "SCRIPT": "scr_playCard1",
+    "TAGS": [
+      "Attack",
+      "Ranged"
+    ],
+    "DESCRIPTION": "A root emerges from the ground a set distance forward.",
+    "SPRITE": "spr_card1",
+    "FLAVOUR": "Impaled."
+  },
+  {
+    "ID": 2,
+    "NAME": "Aqua Burst",
+    "RARITY": 1,
+    "TYPE": "Active",
+    "ELEMENT": "Water",
+    "COLOUR": "Red",
+    "POWER": 8,
+    "SCRIPT": "scr_playCard2",
+    "TAGS": [
+      "Attack",
+      "Projectile",
+      "Ranged"
+    ],
+    "DESCRIPTION": "Fire 3 water blasts in a cone.",
+    "SPRITE": "spr_card2",
+    "FLAVOUR": "Like a shotgun, but wet"
+  },
+  {
+    "ID": 3,
+    "NAME": "Gust Tackle",
+    "RARITY": 1,
+    "TYPE": "Active",
+    "ELEMENT": "Wind",
+    "COLOUR": "Red",
+    "POWER": 10,
+    "SCRIPT": "scr_playCard0",
+    "TAGS": [
+      "Mobility",
+      "Melee",
+      "Attack"
+    ],
+    "DESCRIPTION": "Charge forward, stopping and damaging the first enemy hit.",
+    "SPRITE": "spr_card3",
+    "FLAVOUR": "Forwards!"
+  },
+  {
+    "ID": 4,
+    "NAME": "Enflame",
+    "RARITY": 1,
+    "TYPE": "Active",
+    "ELEMENT": "Fire",
+    "COLOUR": "Red",
+    "POWER": 2,
+    "SCRIPT": "scr_playCard4",
+    "TAGS": [
+      "Buff"
+    ],
+    "DESCRIPTION": "Shoots a fireball.",
+    "SPRITE": "spr_card0",
+    "FLAVOUR": "A mage's bread and butter"
+  }
+]

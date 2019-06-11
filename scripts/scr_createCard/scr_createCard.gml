@@ -8,23 +8,17 @@ var card = instance_create_layer(x,y,"GUI", obj_card);
 card.deckOrigin = homeDeck;
 card.cardID = cardToAdd;
 
-switch(cardToAdd) //Gives the card its appropriate play script, should eventually refer to a table
-{//For now this is done manually
-case 0: 
-	card.playCard = scr_playCard0;
-	break;
-case 1:
-	card.playCard = scr_playCard1;
-	break;
-case 2:
-	card.playCard = scr_playCard2;
-	break;
-case 3:
-	card.playCard = scr_playCard3;
-	break;
-default:
-	instance_destroy(card);
-	break;
-}
+card.cardName = global.cardLibrary[# cardToAdd, cardData.NAME];
+card.cardRare = global.cardLibrary[# cardToAdd, cardData.RARITY];
+card.cardType = global.cardLibrary[# cardToAdd, cardData.TYPE];
+card.cardElement = global.cardLibrary[# cardToAdd, cardData.ELEMENT];
+card.cardColour = global.cardLibrary[# cardToAdd, cardData.COLOUR];
+card.cardPower = global.cardLibrary[# cardToAdd, cardData.POWER];
+
+card.playCard = global.cardLibrary[# cardToAdd, cardData.SCRIPT];
+
+card.cardTags = global.cardLibrary[# cardToAdd, cardData.TAGS];
+card.description = global.cardLibrary[# cardToAdd, cardData.DESCRIPTION];
+card.flavour = global.cardLibrary[# cardToAdd, cardData.FLAVOUR];
 
 return(card);

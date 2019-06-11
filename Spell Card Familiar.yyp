@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "56455e06-245b-476d-a157-a25a6ad0b8a0",
+            "Value": {
+                "id": "479a67bc-fc59-4c08-b9dc-d3ed4faa8c56",
+                "resourcePath": "datafiles_yy\\CardData.json.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "57f0972f-77e8-4aac-9aba-de011cd45ad6",
             "Value": {
                 "id": "e2ef7159-98b9-4660-a8e3-6d45861b769b",
@@ -524,6 +532,14 @@
                 "id": "2df94f6b-94bd-45f1-93f7-d6bb84ab0a9b",
                 "resourcePath": "views\\e106d570-186c-4ae5-9b94-bdda733ca47e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e91eb092-b9cf-4065-b18b-7112703a8e3e",
+            "Value": {
+                "id": "a68ffd84-47b2-4ee8-aa27-1b1d879c6b02",
+                "resourcePath": "objects\\obj_cardLoader\\obj_cardLoader.yy",
+                "resourceType": "GMObject"
             }
         },
         {
