@@ -3,7 +3,7 @@ if(playerState == actorStates.neutral)
 	friction = 0.5
 	if(keyboard_check_direct(vk_up))
 	{
-		playerFacing = up;
+		facing = up;
 		direction = up;
 		speed = movSpeed;
 		playerState = actorStates.moving;
@@ -11,7 +11,7 @@ if(playerState == actorStates.neutral)
 		
 	if(keyboard_check_direct(vk_down))
 	{
-		playerFacing = down;
+		facing = down;
 		direction = down;
 		speed = movSpeed;
 		playerState = actorStates.moving;
@@ -19,7 +19,7 @@ if(playerState == actorStates.neutral)
 		
 	if(keyboard_check_direct(vk_left))
 	{
-		playerFacing = left;
+		facing = left;
 		direction = left;
 		speed = movSpeed;
 		playerState = actorStates.moving;
@@ -27,7 +27,7 @@ if(playerState == actorStates.neutral)
 		
 	if(keyboard_check_direct(vk_right))
 	{
-		playerFacing = right;
+		facing = right;
 		direction = right;
 		speed = movSpeed;
 		playerState = actorStates.moving;
@@ -36,7 +36,7 @@ if(playerState == actorStates.neutral)
 else if (playerState == actorStates.moving)
 {
 	friction = 0.5;
-	switch(playerFacing)
+	switch(facing)
 	{
 /*--------------------------FACING UP-------------------------*/
 	case up:
@@ -44,7 +44,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_down)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = down;
+			facing = down;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -56,21 +56,21 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && !keyboard_check_direct(vk_right))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_right) && !keyboard_check_direct(vk_left))
 				{
-					playerFacing = upRight;
+					facing = upRight;
 					direction = upRight;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else
 				{
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 					//set sprite index to running up
@@ -78,13 +78,13 @@ else if (playerState == actorStates.moving)
 			}
 			else if(keyboard_check_direct(vk_left))
 			{
-				playerFacing = left;
+				facing = left;
 				direction = left;
 				speed = movSpeed;
 			}
 			else if(keyboard_check_direct(vk_right))
 			{
-				playerFacing = right;
+				facing = right;
 				direction = right;
 				speed = movSpeed;
 			}
@@ -96,7 +96,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_up)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = up;
+			facing = up;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -108,21 +108,21 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && !keyboard_check_direct(vk_right))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 					//set sprite index to running down left
 				}
 				else if(keyboard_check_direct(vk_right) && !keyboard_check_direct(vk_left))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 					//set sprite index to running down right
 				}
 				else
 				{
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 					//set sprite index to running down
@@ -130,13 +130,13 @@ else if (playerState == actorStates.moving)
 			}
 			else if(keyboard_check_direct(vk_left))
 			{
-				playerFacing = left;
+				facing = left;
 				direction = left;
 				speed = movSpeed;
 			}
 			else if(keyboard_check_direct(vk_right))
 			{
-				playerFacing = right;
+				facing = right;
 				direction = right;
 				speed = movSpeed;
 			}
@@ -148,7 +148,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_right)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = right;
+			facing = right;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -160,21 +160,21 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up) && !keyboard_check_direct(vk_down))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_down) && !keyboard_check_direct(vk_up))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 					//set sprite index to running down left
 				}
 				else
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 					//set sprite index to running up
@@ -182,13 +182,13 @@ else if (playerState == actorStates.moving)
 			}
 			else if(keyboard_check_direct(vk_up))
 			{
-				playerFacing = up;
+				facing = up;
 				direction = up;
 				speed = movSpeed;
 			}
 			else if(keyboard_check_direct(vk_down))
 			{
-				playerFacing = down;
+				facing = down;
 				direction = down;
 				speed = movSpeed;
 			}
@@ -200,7 +200,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_left)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = left;
+			facing = left;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -212,21 +212,21 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up) && !keyboard_check_direct(vk_down))
 				{
-					playerFacing = upRight;
+					facing = upRight;
 					direction = upRight;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_down) && !keyboard_check_direct(vk_up))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 					//set sprite index to running up
@@ -234,13 +234,13 @@ else if (playerState == actorStates.moving)
 			}
 			else if(keyboard_check_direct(vk_up))
 			{
-				playerFacing = up;
+				facing = up;
 				direction = up;
 				speed = movSpeed;
 			}
 			else if(keyboard_check_direct(vk_down))
 			{
-				playerFacing = down;
+				facing = down;
 				direction = down;
 				speed = movSpeed;
 			}
@@ -252,7 +252,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_right) && keyboard_check_direct(vk_down)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = downRight;
+			facing = downRight;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -264,28 +264,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_left))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 				}
@@ -294,28 +294,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_up))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 				}
@@ -324,13 +324,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 				}
@@ -339,13 +339,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up))
 				{
-					playerFacing = upRight;
+					facing = upRight;
 					direction = upRight;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 				}
@@ -358,7 +358,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_down)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = downLeft;
+			facing = downLeft;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -370,28 +370,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_right) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_right))
 				{
-					playerFacing = upRight;
+					facing = upRight;
 					direction = upRight;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 				}
@@ -400,28 +400,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_left))
 				{ //Player is pressing 3 directions
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_up))
 				{
-					playerFacing = upRight;
+					facing = upRight;
 					direction = upRight;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 				}
@@ -430,13 +430,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_right))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 				}
@@ -445,13 +445,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_up))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 				}
@@ -464,7 +464,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_right) && keyboard_check_direct(vk_up)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = upRight;
+			facing = upRight;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -476,28 +476,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_up))
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_left))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 				}
@@ -506,28 +506,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_down) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_down))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 				}
@@ -536,13 +536,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left))
 				{
-					playerFacing = upLeft;
+					facing = upLeft;
 					direction = upLeft;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 				}
@@ -551,13 +551,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_down))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 				}
@@ -570,7 +570,7 @@ else if (playerState == actorStates.moving)
 	//If they are, they should pivot, maintaining movement in that direction, while facing the opposite direction 
 		if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_up)) //Check if the player is moving in the opposite direction
 		{
-			playerFacing = upLeft;
+			facing = upLeft;
 			speed = movSpeed * 1.5;
 			playerState = actorStates.pivot;
 			//set sprite_index to pivot sprite
@@ -582,28 +582,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_left) && keyboard_check_direct(vk_right))
 				{ //Player is pressing 3 directions
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_right) && keyboard_check_direct(vk_up))
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_right))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 				}
@@ -612,28 +612,28 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_down) && keyboard_check_direct(vk_left))
 				{ //Player is pressing 3 directions
-					playerFacing = down;
+					facing = down;
 					direction = down;
 					speed = movSpeed;
 					//set sprite index to running up left
 				}
 				else if(keyboard_check_direct(vk_up) && keyboard_check_direct(vk_down))
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 					//set sprite index to running up right
 				}
 				else if(keyboard_check_direct(vk_down))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 					//set sprite index to running up
 				}
 				else
 				{
-					playerFacing = right;
+					facing = right;
 					direction = right;
 					speed = movSpeed;
 				}
@@ -642,13 +642,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_right))
 				{
-					playerFacing = downRight;
+					facing = downRight;
 					direction = downRight;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = up;
+					facing = up;
 					direction = up;
 					speed = movSpeed;
 				}
@@ -657,13 +657,13 @@ else if (playerState == actorStates.moving)
 			{
 				if(keyboard_check_direct(vk_down))
 				{
-					playerFacing = downLeft;
+					facing = downLeft;
 					direction = downLeft;
 					speed = movSpeed;
 				}
 				else
 				{
-					playerFacing = left;
+					facing = left;
 					direction = left;
 					speed = movSpeed;
 				}
@@ -692,6 +692,6 @@ if(playerState == actorStates.pivot) //Once the player is pivoting, decrease the
 	if(speed == 0) //Once the player has fully stopped, return them to neutral
 	{
 		playerState = actorStates.neutral;
-		direction = playerFacing;
+		direction = facing;
 	}
 }

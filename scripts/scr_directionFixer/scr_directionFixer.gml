@@ -1,7 +1,7 @@
 ///@arg facing
 ///@arg trajectory
-///@arg offsetY
 ///@arg offsetX
+///@arg offsetY
 
 //Corrects object spawn location, and trajectory, of objects that are spawned from actors depending
 //on the actor's facing direction

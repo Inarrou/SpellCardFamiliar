@@ -3,7 +3,7 @@
 global.playerHP = 1;
 global.playerMaxHP = 1;
 playerState = actorStates.neutral;
-playerFacing = up; //Used for drawing, and for determining which side a hit box is created
+facing = up; //Used for drawing, and for determining which side a hit box is created
 
 direction = up; //Used for movement in a direction, can be independant of facing direction
 friction = 0.2; //Used for slower the player down if no key is pressed

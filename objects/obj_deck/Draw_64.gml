@@ -2,8 +2,6 @@ image_index = deckType;
 image_speed = 0;
 if (currentCards != 0) //Draws the deck sprite when there are cards remaining
 {
-	image_xscale = 2;
-	image_yscale = 2;
 	draw_self();
 }
 draw_text(x,y,"Deck: " + string(currentCards)); //remaining cards

@@ -50,3 +50,12 @@ enum cardData
 	SPRITE,
 	FLAVOUR
 }
+
+enum camMode
+{
+	normal,
+	fixed,
+	overshoot,
+	undershoot,
+	shake
+}
