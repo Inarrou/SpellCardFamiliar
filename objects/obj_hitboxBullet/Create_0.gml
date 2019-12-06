@@ -16,4 +16,4 @@ tempSpeed = 0; //Used for resetting speed after hitstop
 onHitEffect = noone; //script for on hit effect
 onEndEffect = noone; //script for end of lifespan effect
 
-hitsBullets = false;
+bulletHP = 100; //Used for determining bullet collision effects

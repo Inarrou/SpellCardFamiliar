@@ -11,7 +11,7 @@ if(obj_player.playerState == actorStates.neutral || obj_player.playerState == ac
 	obj_player.alarm[1] = 10;
 }
 
-if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card)
+if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card && alarm[1] == 0)
 {
 	//i think it needs to be in a while loop. like everything, including the hbox and everything. or something idk im losing my mind.
 	var tspeed = 5;

@@ -34,3 +34,5 @@ for(var i = 0; i < ds_list_size(deckList); i++)
 	//Fills the new deck with cards
 	ds_list_add(newDeck.deck, scr_createCard(newDeck, ds_list_find_value(deckList,i))) 
 }
+
+ds_list_shuffle(newDeck.deck);

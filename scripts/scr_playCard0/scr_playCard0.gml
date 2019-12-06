@@ -12,7 +12,7 @@ if(obj_player.playerState == actorStates.neutral || obj_player.playerState == ac
 	obj_player.alarm[1] = 10;
 }
 
-if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card)
+if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card && alarm[1] == 0)
 {
 	hitbox = scr_createHitbox(obj_player.x,obj_player.y,0,5,spr_card0,obj_player.id,60,obj_player.facing,up,1,1,50,10,1);
 	scr_discardCard(card);
