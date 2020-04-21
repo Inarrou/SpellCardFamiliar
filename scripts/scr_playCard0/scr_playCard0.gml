@@ -1,30 +1,41 @@
 ///@arg handPosition
 
-//Takes the hand position, calls what scripts are necessary to play the card, then discards it.
-//Maybe in the future have scr_createHitbox return the hitbox ID so stat assignments can happen here?
+//Fireball
 
 var card = argument0;
 
-if(obj_player.playerState == actorStates.neutral || obj_player.playerState == actorStates.moving || obj_player.playerState = actorStates.pivot)
-{
+//Does a different action depending on player state
+if(obj_player.playerState == actorStates.neutral || obj_player.playerState == actorStates.moving || obj_player.playerState == actorStates.pivot)
+{//Start up
 	obj_player.spellQueue = card;
 	obj_player.playerState = actorStates.startUp;
-	obj_player.alarm[1] = 10;
+	obj_player.alarm[1] = 10; //when alarm finishes, player state changes
 }
-
 if(obj_player.playerState == actorStates.casting && obj_player.spellQueue == card && alarm[1] == 0)
-{
-	hitbox = scr_createHitbox(obj_player.x,obj_player.y,0,5,spr_card0,obj_player.id,60,obj_player.facing,up,1,1,50,10,1);
-	scr_discardCard(card);
-	obj_player.alarm[1] = 60;
+{//Active
+	if(scr_giveTag(hooks.precast, statusBar) == true) //Check if anything can negate the cast
+	{
+		var hitbox = scr_createHitbox(x,y,0,sprite_height,spr_card0,id,180,facing,up,3,card.cardPower,50,5,5,5);
+		obj_player.attackMods[0] = noone; //array in player object used when attacks are activated
+		scr_giveTag(hooks.casted, statusBar);
+		if(obj_player.attackMods[0] != noone)
+		{
+			for(var i = 0; i < array_length_1d(attackMods); i++) //Applies each mod to the hitbox
+			{
+				script_execute(obj_player.attackMods[i], hitbox);
+			}
+		}
 	
-	obj_camera.offset = 20;
-	obj_camera.mode = camMode.overshoot;
-	obj_camera.alarm[0] = 60
-}
-
-if(obj_player.playerState == actorStates.recovery && obj_player.spellQueue == card)
-{
-	obj_player.spellQueue = noone;	
+		obj_camera.offset = 20;
+		obj_camera.mode = camMode.overshoot;
+		obj_camera.alarm[0] = 20;
+	}
+	
+	scr_cleanUp(card);
 	obj_player.alarm[1] = 1;
+}
+if(obj_player.playerState == actorStates.recovery && obj_player.spellQueue == card)
+{//Recovery
+	obj_player.spellQueue = noone;	
+	obj_player.alarm[1] = 19;
 }

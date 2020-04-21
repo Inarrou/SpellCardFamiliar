@@ -1,4 +1,4 @@
-if(toFollow != noone)
+if(instance_exists(toFollow))
 {
 	switch(mode)
 	{
@@ -28,5 +28,6 @@ if(toFollow != noone)
 }
 else
 {
+	if(instance_exists(obj_player))
 	toFollow = obj_player;	
 }

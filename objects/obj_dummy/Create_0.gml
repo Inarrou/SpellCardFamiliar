@@ -5,6 +5,13 @@ state = actorStates.neutral; //determines what actions the actor can perform
 hitstun = 0;
 facing = down;
 movSpeed = 3;
-alarm[0] = -1; //skips the step event if this is running, used for hitstop
+handSize = 1;
+defence = 0;
+
+for(var i = 0; i <= 10; i++)
+eleRes[i] = 0;
+
+statusBar = ds_list_create();
+
 image_index = 0;
 image_speed = 0;

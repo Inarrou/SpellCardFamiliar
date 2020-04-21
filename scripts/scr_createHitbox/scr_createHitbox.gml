@@ -13,7 +13,8 @@
 ///@arg damage
 ///@arg hitstun
 ///@arg hitstop
-///@arg knockback
+///@arg knockbackDecay
+///@arg knockbackStrength
 
 var xpos = argument0; 
 var ypos = argument1;
@@ -28,7 +29,8 @@ var movSpeed = argument9; //How quickly the hitbox is moving
 var damage = argument10;
 var hitstun = argument11;
 var hitstop = argument12;
-var knockback = argument13;
+var knockbackDecay = argument13;
+var knockBackStrength = argument14;
 
 var totalOffset = scr_directionFixer(facing,trajectory,offsetX,offsetY);
 
@@ -44,6 +46,7 @@ var totalOffset = scr_directionFixer(facing,trajectory,offsetX,offsetY);
 	hitbox.damage = damage;
 	hitbox.hitstun = hitstun;
 	hitbox.hitstop = hitstop;
-	hitbox.knockback = knockback;
+	hitbox.knockbackDecay = knockbackDecay;
+	hitbox.knockbackStrength = knockBackStrength
 	
-	return hitbox.id;
+	return(hitbox.id);

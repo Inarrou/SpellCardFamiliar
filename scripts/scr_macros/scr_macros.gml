@@ -48,7 +48,27 @@ enum cardData
 	TAGS,
 	DESCRIPTION,
 	SPRITE,
-	FLAVOUR
+	FLAVOUR,
+	CLEANUP,
+	EXTRA1,
+	EXTRA2,
+	EXTRA3,
+}
+
+enum cardType
+{
+	active,
+	channel,
+	freeCast,
+	combo,
+	reactive
+}
+
+enum cardCleanUp
+{
+	discard,
+	deplete,
+	disenchant
 }
 
 enum camMode
@@ -58,4 +78,36 @@ enum camMode
 	overshoot,
 	undershoot,
 	shake
+}
+
+//Things that are used by statuses to determine if they activate
+enum hooks
+{
+	precast,
+	casted,
+	predraw,
+	draw,
+	cleanup,
+	discard,
+	deplete,
+	dump,
+	prehit,
+	hit,
+	prehurt,
+	hurt
+}
+
+enum elemental
+{
+	neutral,
+	wind,
+	lightning,
+	fire,
+	earth,
+	water,
+	wood,
+	ice,
+	poison,
+	light,
+	dark
 }

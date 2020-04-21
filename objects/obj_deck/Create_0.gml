@@ -4,6 +4,7 @@
 currentCards = 0;
 deckType = 0;
 drawTimer = 5; //arbitrary, should be based off stats later?
+//List of card objects
 deck = ds_list_create();
 discard = ds_list_create();
 

@@ -11,7 +11,7 @@ file_text_close(cardFile);
 var jsonMap = json_decode(fileData); //Creates a map with it
 var entryList = jsonMap[? "default"]; //List of the maps
 var numCards = ds_list_size(entryList);
-global.cardLibrary = ds_grid_create(numCards, 12);
+global.cardLibrary = ds_grid_create(numCards, 16);
 
 for(var i = 0; i<numCards; i++) //Copy all data into a column in the grid
 {
@@ -32,6 +32,11 @@ for(var i = 0; i<numCards; i++) //Copy all data into a column in the grid
 	global.cardLibrary[# i, cardData.DESCRIPTION] = cardMap[? "DESCRIPTION"];
 	global.cardLibrary[# i, cardData.SPRITE] = cardMap[? "SPRITE"];
 	global.cardLibrary[# i, cardData.FLAVOUR] = cardMap[? "FLAVOUR"];
+	global.cardLibrary[# i, cardData.CLEANUP] = cardMap[? "CLEANUP"];
+	//Used for special card types
+	global.cardLibrary[# i, cardData.EXTRA1] = cardMap[? "EXTRA1"];
+	global.cardLibrary[# i, cardData.EXTRA2] = cardMap[? "EXTRA2"];
+	global.cardLibrary[# i, cardData.EXTRA3] = cardMap[? "EXTRA3"];
 	
 	ds_map_destroy(cardMap);
 }

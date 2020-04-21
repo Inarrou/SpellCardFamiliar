@@ -4,6 +4,17 @@ global.playerHP = 1;
 global.playerMaxHP = 1;
 playerState = actorStates.neutral;
 facing = up; //Used for drawing, and for determining which side a hit box is created
+listening = true; //Used for hooks to interrupt/change running code
+broadcast = ds_list_create();
+statusBar = ds_list_create();
+defence = 0;
+
+knockback = 0;
+tempKnockback = 0;
+weight = 50;
+
+for(var i = 0; i <= 10; i++)
+eleRes[i] = 0;
 
 direction = up; //Used for movement in a direction, can be independant of facing direction
 friction = 0.2; //Used for slower the player down if no key is pressed

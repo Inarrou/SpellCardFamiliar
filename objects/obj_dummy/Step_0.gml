@@ -22,7 +22,7 @@ if(state == actorStates.neutral)
 	facing = scr_turnTowards(self,obj_player,facing);
 	image_angle = facing;
 	direction = facing;
-	if(distance >= 20 && alarm[2] <=0)
+	if(distance >= 50 && alarm[2] <=0)
 	{
 		destination = scr_movTowards(obj_player, self);
 		state = actorStates.moving;
@@ -30,9 +30,10 @@ if(state == actorStates.neutral)
 }
 if(state == actorStates.moving)
 {
-	distance = abs(point_distance(x,y, destination[0], destination[1]));
-	if(distance < 20)
+	distance = point_distance(x,y, destination[0], destination[1]);
+	if(distance < 50)
 	{
 		state = actorStates.neutral;
 	}
 }
+scr_collision();

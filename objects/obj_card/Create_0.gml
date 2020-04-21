@@ -5,12 +5,13 @@ deckOrigin = noone; //The deck this card comes from
 cardID = 0;
 cardName = "default";
 cardRare = 1;
-cardType = "";
-cardElement = "";
+cardElement = 0;
 cardColour = "";
 cardPower = 0;
 
 playCard = noone; //What happens when the card is played
+cleanUp = 0;
+cleanUpTemp = cleanUp;
 
 cardTags = noone;
 description = "";

@@ -33,7 +33,7 @@ if(playerState == actorStates.neutral)
 		playerState = actorStates.moving;
 	}
 }
-else if (playerState == actorStates.moving)
+if (playerState == actorStates.moving)
 {
 	friction = 0.5;
 	switch(facing)
